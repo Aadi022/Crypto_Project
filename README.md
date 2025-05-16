@@ -10,7 +10,7 @@ It involves:
 ---
 
 ### **Project Demo Outputs**  
-I have attached the output images of the entire working end-to-end backend project in this Google Drive folder:  
+I have attached the output images of the entire working end-to-end backend assignment in this Google Drive folder:  
 [https://drive.google.com/drive/folders/1qRy7MByF4pdisOkRYwWkw1OwFKlWrPQL?usp=sharing](https://drive.google.com/drive/folders/1qRy7MByF4pdisOkRYwWkw1OwFKlWrPQL?usp=sharing)  
 I kindly request you to refer to this link for verification.
 
