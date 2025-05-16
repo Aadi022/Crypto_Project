@@ -7,11 +7,11 @@ const mainroute= require("./routes/routes.js");
 const connectToRabbitMQ= require("./helper/consumer.js");
 const port = process.env.PORT;
 
-connectToRabbitMQ();
+connectToRabbitMQ();  //Handling the event queue
 
 app.use(cors());
 app.use(bodyparser.json());
-app.use(mainroute);
+app.use(mainroute);  //Routing for both the APIs
 
 app.listen(port,function(){
     console.log("The server is running on port ",port);
