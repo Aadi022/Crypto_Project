@@ -94,99 +94,56 @@ API Server connected to RabbitMQ
 
 ## 🧑‍💻 How It Works
 
-* *   The **worker-server** publishes `{ "trigger": "update" }` to the `CRYPTO_STATS_UPDATE` queue every 15 minutes.
-*     
-* *   The **api-server** listens to this queue.
-*     
-* *   On event reception, it triggers `storeCryptoStats()`, which:
-*     
-*     * *   Calls CoinGecko API.
-*     *     
+* *   The **worker-server** publishes { "trigger": "update" } to the CRYPTO\_STATS\_UPDATE queue every 15 minutes.
+* *   The **api-server** subscribes to this queue.
+* *   Upon receiving an event, it triggers storeCryptoStats(), which:* *   Calls the CoinGecko API.
 *     * *   Stores data in MongoDB Atlas.
-*     *     
-* *   Exposes APIs to fetch latest stats and deviation.
-*     
-
-* * *
+* *   Exposes APIs to fetch the latest stats and deviation.
 
 ## 📡 API Endpoints
 
-### 1\. `/cryptostats/stats`
+### 1\. /cryptostats/stats
 
 * *   **Method**: GET
-*     
-* *   **Query Param**: `coin` (bitcoin | ethereum | matic-network)
-*     
-* *   **Example**:
-*     
-*     ```
-*     http://localhost:3000/cryptostats/stats?coin=bitcoin
-*     ```
-*     
+* *   **Query Param**: coin (bitcoin | ethereum | matic-network)
+* *   **Example**: http://localhost:3000/cryptostats/stats?coin=bitcoin
 * *   **Response**:
 *     
+*     json
+*     
+*     Copy
+*     
+*     `{ "price": 40000, "marketCap": 800000000, "24hChange": 3.4 }`
+*     
 
-
-{
-  "price": 40000,
-  "marketCap": 800000000,
-  "24hChange": 3.4
-}
-
-
-* * *
-
-### 2\. `/centraltendency/deviation`
+### 2\. /centraltendency/deviation
 
 * *   **Method**: GET
-*     
-* *   **Query Param**: `coin` (bitcoin | ethereum | matic-network)
-*     
-* *   **Example**:
-*     
-*     ```
-*     http://localhost:3000/centraltendency/deviation?coin=bitcoin
-*     ```
-*     
+* *   **Query Param**: coin (bitcoin | ethereum | matic-network)
+* *   **Example**: http://localhost:3000/centraltendency/deviation?coin=bitcoin
 * *   **Response**:
 *     
-
-```json
-{
-  "deviation": 4082.48
-}
-```
-
-* * *
-
-## ✅ Assignment Success Criteria Covered
-
-* *   ✅ Working `/stats` API to fetch latest data.
+*     json
 *     
-* *   ✅ Working `/deviation` API for standard deviation of prices.
+*     Copy
 *     
-* *   ✅ Background job triggers via RabbitMQ (every 15 mins).
-*     
-* *   ✅ MongoDB Atlas schema structured for crypto stats.
-*     
-* *   ✅ Proper folder structure & modular code.
-*     
-* *   ✅ Documentation (this README).
+*     `{ "deviation": 4082.48 }`
 *     
 
-* * *
+## ✅ Assignment Success Criteria
 
-## ✅ Notes
+* *   <input type="checkbox" checked disabled> Working /stats API to fetch latest data.
+* *   <input type="checkbox" checked disabled> Working /deviation API for standard deviation of prices.
+* *   <input type="checkbox" checked disabled> Background job triggers via RabbitMQ (every 15 minutes).
+* *   <input type="checkbox" checked disabled> MongoDB Atlas schema structured for crypto stats.
+* *   <input type="checkbox" checked disabled> Proper folder structure and modular code.
+* *   <input type="checkbox" checked disabled> Documentation (this README).
 
-* *   RabbitMQ used as the event queue (NATS alternative).
-*     
-* *   MongoDB Atlas is used as cloud database.
-*     
+## 📝 Notes
+
+* *   RabbitMQ is used as the event queue (NATS alternative).
+* *   MongoDB Atlas serves as the cloud database.
 * *   CoinGecko API provides live crypto stats.
-*     
-* *   Environment variables are used for sensitive configs.
-*     
-* *   .env is ignored in .gitignore for security.
-*     
+* *   Environment variables manage sensitive configurations.
+* *   .env is excluded in .gitignore for security.
 
-* * *
