@@ -26,10 +26,12 @@ It is responsible for:
 
 ##  Project Structure
 
-
-`worker-server/ ├── server.js              # Entry point of the worker-server ├── package.json           # Project dependencies & metadata ├── package-lock.json      # Exact dependency versions └── README.md              # This file`
-
+worker-server/  
+├── server.js    
+├── package-lock.json 
+├── package.json
 * * *
+
 
 ## 🛠 Setup Instructions
 
