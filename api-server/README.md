@@ -109,9 +109,6 @@ API Server connected to RabbitMQ
  *   **Example**: http://localhost:3000/cryptostats/stats?coin=bitcoin
  *   **Response**:
      
-     json
-     
-     Copy
      
      `{ "price": 40000, "marketCap": 800000000, "24hChange": 3.4 }`
      
@@ -123,9 +120,6 @@ API Server connected to RabbitMQ
  *   **Example**: http://localhost:3000/centraltendency/deviation?coin=bitcoin
  *   **Response**:
      
-     json
-     
-     Copy
      
      `{ "deviation": 4082.48 }`
      
