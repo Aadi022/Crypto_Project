@@ -1,4 +1,4 @@
-# 🚀 KoinX Assignment — Worker Server
+#  KoinX Assignment — Worker Server
 
 This repository contains the **Worker Server** component of the KoinX assignment.
 
@@ -24,7 +24,7 @@ It is responsible for:
 
 * * *
 
-## 🗂 Project Structure
+##  Project Structure
 
 
 `worker-server/ ├── server.js              # Entry point of the worker-server ├── package.json           # Project dependencies & metadata ├── package-lock.json      # Exact dependency versions └── README.md              # This file`
