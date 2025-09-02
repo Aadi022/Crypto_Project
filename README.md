@@ -1,20 +1,13 @@
-#  KoinX Assignment — Backend System (API Server + Worker Server)
+Crypto Backend System (API Server + Worker Server)
 
-This project is a **full backend system** built for the KoinX assignment.  
+This project is a **full backend system** built for the Crypto fetching and analysis.  
 It involves:
 - Fetching cryptocurrency statistics from **CoinGecko API**.
 - Storing data in **MongoDB Atlas**.
 - Managing background jobs & inter-server communication using **RabbitMQ (via Docker)**.
 - Exposing APIs to retrieve latest stats and standard deviation data.
 
----
 
-### **Project Demo Outputs**  
-I have attached the output images of the entire working end-to-end backend assignment in this Google Drive folder:  
-[https://drive.google.com/drive/folders/1qRy7MByF4pdisOkRYwWkw1OwFKlWrPQL?usp=sharing](https://drive.google.com/drive/folders/1qRy7MByF4pdisOkRYwWkw1OwFKlWrPQL?usp=sharing)  
-I kindly request you to refer to this link for verification.
-
----
 
 ##  Project Components
 
