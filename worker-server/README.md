@@ -1,6 +1,4 @@
-#  KoinX Assignment — Worker Server
-
-This repository contains the **Worker Server** component of the KoinX assignment.
+This repository contains the **Worker Server** component.
 
 It is responsible for:
 
@@ -91,7 +89,7 @@ Expected logs:
 
 * * *
 
-##  Assignment Success Criteria
+##  Success Criteria
 
  *    Publishes a message to RabbitMQ.
      
@@ -111,3 +109,4 @@ Expected logs:
  *   Trigger message is published manually or as part of a broader system.
      
  *   Environment variables manage sensitive configs.
+
