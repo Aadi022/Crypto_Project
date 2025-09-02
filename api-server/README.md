@@ -1,5 +1,3 @@
-# 🚀 KoinX Assignment — API Server
-
 This repository contains the **API Server** component of the KoinX assignment.  
 It is responsible for:
 - Fetching cryptocurrency statistics from the **CoinGecko API**.
@@ -124,7 +122,7 @@ API Server connected to RabbitMQ
      `{ "deviation": 4082.48 }`
      
 
-## ✅ Assignment Success Criteria
+## ✅ Success Criteria
 
  *   <input type="checkbox" checked disabled> Working /stats API to fetch latest data.
  *   <input type="checkbox" checked disabled> Working /deviation API for standard deviation of prices.
@@ -140,4 +138,5 @@ API Server connected to RabbitMQ
  *   CoinGecko API provides live crypto stats.
  *   Environment variables manage sensitive configurations.
  *   .env is excluded in .gitignore for security.
+
 
